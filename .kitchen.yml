@@ -1,0 +1,35 @@
+---
+driver:
+  name: vagrant
+  provision: false
+  synced_folders:
+    - ['.kitchen/cache', '/tmp/omnibus', disabled: true]
+
+provisioner:
+  name: salt_solo
+  salt_install: bootstrap
+  formula: carbon-relay-ng
+  require_chef: false
+  salt_pillar_root: pillar.example
+  pillars-from-files:
+    carbon-relay-ng.sls: pillar.example
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - carbon-relay-ng
+  state_top:
+    base:
+      '*':
+        - carbon-relay-ng
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: debian/stretch64
+#  - name: debian/jessie64
+
+suites:
+  - name: default
+
