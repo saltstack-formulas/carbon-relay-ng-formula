@@ -1,0 +1,11 @@
+
+{% set carbonrelayng = salt['grains.filter_by']({
+    'default': {
+        'pkg': 'carbon-relay-ng',
+    },
+    'Debian': {
+	'deps': [ 'apt-transport-https' ],
+	'pkgrepo': 'https://packagecloud.io/raintank/raintank/debian/',
+    },
+}, merge=salt['pillar.get']('carbon-relay-ng:lookup'), base='default') %}
+
