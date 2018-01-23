@@ -3,6 +3,8 @@
     'default': {
         'pkg': 'carbon-relay-ng',
         'pkg_version': 'latest',
+        'conffile': '/etc/carbon-relay-ng/carbon-relay-ng.conf',
+        'conffile_source': 'salt://carbon-relay-ng/files/carbon-relay-ng.conf',
     },
     'Debian': {
 	'deps': [ 'apt-transport-https' ],
