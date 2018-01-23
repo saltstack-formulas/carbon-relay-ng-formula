@@ -28,7 +28,7 @@ verifier:
 
 platforms:
   - name: debian/stretch64
-#  - name: debian/jessie64
+  - name: debian/jessie64
 
 suites:
   - name: default

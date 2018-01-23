@@ -1,0 +1,4 @@
+carbon-relay-ng:
+  lookup:
+    # force installation of a specific version
+    #pkg_version: 0.9.4-1

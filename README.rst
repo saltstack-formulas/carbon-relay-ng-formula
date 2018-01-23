@@ -4,7 +4,7 @@ carbon-relay-ng-formula
 
 A saltstack formula to install and configure [carbon-relay-ng](https://github.com/graphite-ng/carbon-relay-ng), an alternative carbon-cache written in Go.
 
-At the moment, only Debian Stretch is supported.
+At the moment, only Debian Jessie and Stretch are supported.
 
 .. note::
 
