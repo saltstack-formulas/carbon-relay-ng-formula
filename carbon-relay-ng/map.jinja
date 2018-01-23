@@ -5,6 +5,10 @@
         'pkg_version': 'latest',
         'conffile': '/etc/carbon-relay-ng/carbon-relay-ng.conf',
         'conffile_source': 'salt://carbon-relay-ng/files/carbon-relay-ng.conf',
+        'service': 'carbon-relay-ng',
+        'service_dir': '/var/run/carbon-relay-ng',
+        'user': 'carbon-relay-ng',
+        'group': 'carbon-relay-ng',
     },
     'Debian': {
 	'deps': [ 'apt-transport-https' ],

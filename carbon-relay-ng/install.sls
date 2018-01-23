@@ -21,4 +21,10 @@ carbon-relay-ng_pkg:
     - require:
       - pkgrepo: carbon-relay-ng_repo
 
+carbon-relay-ng_service-dir:
+  file.directory:
+    - name: {{ carbonrelayng.service_dir }}
+    - user: {{ carbonrelayng.user }}
+    - group: {{ carbonrelayng.group }}
+
 {% endif %}

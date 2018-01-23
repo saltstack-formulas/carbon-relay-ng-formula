@@ -2,4 +2,5 @@
 include:
   - .install
   - .config
+  - .service
 
