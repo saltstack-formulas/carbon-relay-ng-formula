@@ -1,6 +1,6 @@
-================
+=======================
 carbon-relay-ng-formula
-================
+=======================
 
 A saltstack formula to install and configure [carbon-relay-ng](https://github.com/graphite-ng/carbon-relay-ng), an alternative carbon-cache written in Go.
 
@@ -19,7 +19,25 @@ Available states
     :local:
 
 ``carbon-relay-ng``
-------------
+-------------------
+
+Installs the carbon-relay-ng package, using pillar configures the service and manages the service.
+
+
+``carbon-relay-ng.install``
+---------------------------
 
 Installs the carbon-relay-ng package.
+
+
+``carbon-relay-ng.config``
+--------------------------
+
+Manages the configuration file using pillar defined.
+
+
+``carbon-relay-ng.service``
+---------------------------
+
+Manages the carbon-relay-ng service.
 
