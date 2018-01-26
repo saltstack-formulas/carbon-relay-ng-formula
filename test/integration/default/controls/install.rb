@@ -11,3 +11,8 @@ end
 describe file('/etc/carbon-relay-ng/carbon-relay-ng.conf') do
     it { should be_file }
 end
+
+describe directory('/var/run/carbon-relay-ng') do
+  it { should be_owned_by 'carbon-relay-ng' }
+  it { should be_grouped_into 'carbon-relay-ng' }
+end
