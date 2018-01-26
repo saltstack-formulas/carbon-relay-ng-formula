@@ -5,3 +5,6 @@ carbon-relay-ng_service:
   service.running:
     - name: {{ carbonrelayng.service }}
     - enable: True
+    - watch:
+      - file: {{ carbonrelayng.conffile }}
+
