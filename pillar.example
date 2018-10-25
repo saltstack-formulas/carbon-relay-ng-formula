@@ -17,7 +17,7 @@ carbon-relay-ng:
     http_addr: 0.0.0.0:8081
     spool_dir: 'spool'
     pid_file: 'carbon-relay-ng.pid'
-    log_level: 'notice'
+    log_level: 'info'
     validation_level_legacy: 'medium'
     validation_level_m20: 'medium'
     validate_order: false
