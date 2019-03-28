@@ -1,3 +1,4 @@
+---
 # pillar example to configure carbon-relay-ng
 
 carbon-relay-ng:
@@ -5,7 +6,7 @@ carbon-relay-ng:
   # default values can be seen in map.jinja
   lookup:
     # force installation of a specific version
-    #pkg_version: 0.9.4-1
+    pkg_version: 0.9.4-1
 
   # application configuration is done in the following pillar keys
   # defaults values are visible in defaults.yaml
@@ -83,4 +84,3 @@ carbon-relay-ng:
         - 'graphite.prod:2003 prefix=prod. spool=true pickle=true'
         - 'graphite.staging:2003 prefix=staging. spool=true pickle=true'
   cmds: []
-
