@@ -48,6 +48,7 @@ coverage.xml
 .kitchen
 .kitchen.local.yml
 kitchen.local.yml
+junit-*.xml
 
 # Translations
 *.mo
@@ -90,6 +91,9 @@ celerybeat-schedule
 venv/
 ENV/
 
+# visual studio
+.vs/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -104,10 +108,27 @@ ENV/
 .mypy_cache/
 
 # Bundler
-Gemfile.lock
+.bundle/
 
 # copied `.md` files used for conversion to `.rst` using `m2r`
 docs/*.md
 
 # Vim
 *.sw?
+
+## Collected when centralising formulas (check and sort)
+# `collectd-formula`
+.pytest_cache/
+/.idea/
+Dockerfile.*_*
+ignore/
+tmp/
+
+# `salt-formula` -- Vagrant Specific files
+.vagrant
+top.sls
+!test/salt/pillar/top.sls
+
+# `suricata-formula` -- Platform binaries
+*.rpm
+*.deb
