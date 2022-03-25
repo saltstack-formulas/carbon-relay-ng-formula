@@ -1,10 +1,14 @@
+# -*- coding: utf-8 -*-
+# vim: ft=sls
 
-{% from "carbon-relay-ng/map.jinja" import carbonrelayng with context %}
+{#- Get the `tplroot` from `tpldir` #}
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- from tplroot ~ "/map.jinja" import mapdata as carbonrelayng with context %}
 
 carbon-relay-ng_service:
   service.running:
-    - name: {{ carbonrelayng.service }}
+    - name: {{ carbonrelayng.config.service }}
     - enable: True
     - watch:
-      - file: {{ carbonrelayng.conffile }}
+      - file: {{ carbonrelayng.config.conffile }}
 
