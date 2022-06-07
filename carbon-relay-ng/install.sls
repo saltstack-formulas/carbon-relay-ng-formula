@@ -12,7 +12,9 @@ carbon-relay-ng_deps:
 {% if carbonrelayng.config.pkgrepo %}
 carbon-relay-ng_repo:
   pkgrepo.managed:
-    - name: 'deb {{ carbonrelayng.config.pkgrepo }} {{ salt['grains.get']('oscodename') }} main'
+    # Deactivate this method until OS supported
+    {%- set oscodename = carbonrelayng.config.fake_oscodename if carbonrelayng.config.get('fake_oscodename', False) else salt['grains.get']('oscodename') %}
+    - name: 'deb {{ carbonrelayng.config.pkgrepo }} {{ oscodename }} main'
     - key_url: {{ carbonrelayng.config.pkgrepo_key }}
     - require:
       - pkg: carbon-relay-ng_deps

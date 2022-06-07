@@ -13,6 +13,6 @@
 ---
 values:
   config:
-    deps: apt-transport-https
+    deps: ['apt-transport-https']
     pkgrepo: https://packagecloud.io/raintank/raintank/debian/
     pkgrepo_key: https://packagecloud.io/raintank/raintank/gpgkey
