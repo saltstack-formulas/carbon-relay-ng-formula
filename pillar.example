@@ -2,14 +2,14 @@
 # pillar example to configure carbon-relay-ng
 
 carbon-relay-ng:
-  # the lookup key lets you redefine core (system) configuration options
-  # default values can be seen in map.jinja
+  # the lookup key lets you redefine core (formula) configuration options
+  # default values can be seen in `parameters/defaults.yaml`
   lookup:
     # force installation of a specific version
     pkg_version: 0.9.4-1
 
   # application configuration is done in the following pillar keys
-  # defaults values are visible in defaults.yaml
+  # defaults values are visible in `parameters/defaults.yaml`
   # you must initialize them at empty to remove them
   global:
     instance: '${HOST}'
