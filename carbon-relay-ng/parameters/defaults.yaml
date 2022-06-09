@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+#
+# Set default values.
+---
+values:
+  config:
+    deps: []
+    pkg: carbon-relay-ng
+    pkgrepo: ''
+    pkg_version: latest
+    conffile: /etc/carbon-relay-ng/carbon-relay-ng.conf
+    conffile_source: salt://carbon-relay-ng/files/carbon-relay-ng.conf
+    service: carbon-relay-ng
+    service_dir: /var/run/carbon-relay-ng
+    user: carbon-relay-ng
+    group: carbon-relay-ng
+  global: {}
+  instrumentation: {}
+  inputs:
+    listen_addr: 0.0.0.0:2003
+    pickle_addr: 0.0.0.0:2013
+    amqp: {}
+  aggregators: {}
+  rewriters: {}
+  routes: {}
+  cmds: []
