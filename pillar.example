@@ -23,7 +23,7 @@ carbon-relay-ng:
     validation_level_m20: 'medium'
     validate_order: false
     bad_metrics_max_age: '24h'
-    blacklist:
+    blocklist:
       - 'prefix collectd.localhost'
       - 'regex ^foo\..*\.cpu+'
 
