@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/saltstack-formulas/carbon-relay-ng-formula/compare/v1.0.0...v1.0.1) (2022-06-09)
+
+
+### Documentation
+
+* update pillar.example ([24bddaf](https://github.com/saltstack-formulas/carbon-relay-ng-formula/commit/24bddafee18cb3c892ea8e9ff06c15eb22621599))
+
 # [1.0.0](https://github.com/saltstack-formulas/carbon-relay-ng-formula/compare/v0.1.0...v1.0.0) (2022-06-09)
 
 
